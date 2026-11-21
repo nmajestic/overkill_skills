@@ -1,0 +1,14 @@
+{
+  "name": "nmajestic",
+  "owner": {
+    "name": "Nicholas Majestic"
+  },
+  "plugins": [
+    {
+      "name": "overkill",
+      "source": "./",
+      "description": "A quality-first pipeline every agent-written change goes through, from idea to pull request.",
+      "version": "0.1.0"
+    }
+  ]
+}
