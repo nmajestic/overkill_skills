@@ -1,12 +1,10 @@
-# Overkill
+# Specflow
 
-A quality-first pipeline that every agent-written change goes through, from
-rough idea to pull request. A one-line fix gets the same treatment as a new
-feature: a spec, a plan, tests first, parallel implementation, automated
-checks, eight independent reviewers, and a PR that only opens once everything
-is fixed.
-
-Yes, it's overkill. That's the point.
+A spec-driven engineering pipeline for agent-written changes, from rough idea
+to pull request. Every change — from a small bug fix to a new feature — goes
+through the same seven stages: a spec, a plan, tests written from the spec,
+parallel implementation, automated verification, an eight-persona review, and
+a PR that opens only once every check and finding is resolved.
 
 Works in **Claude Code** (as a plugin or standalone skills) and **OpenCode**
 (as standalone skills), in any language.
@@ -33,7 +31,7 @@ spec ─▶ you approve ─▶ plan ─▶ you approve ─▶ write-tests ─▶
 ## Principles
 
 - **You decide twice.** You approve the spec and the plan, and every design
-  fork. After that, Overkill only stops for things that need you: a test
+  fork. After that, Specflow only stops for things that need you: a test
   change, a reviewer questioning a decision you made, or a loop that won't
   settle.
 - **Tests come from what you asked for,** not from the plan, so a wrong plan
@@ -55,17 +53,17 @@ spec ─▶ you approve ─▶ plan ─▶ you approve ─▶ write-tests ─▶
 ### Claude Code plugin
 
 ```
-/plugin marketplace add nmajestic/overkill_skills
-/plugin install overkill@nmajestic
+/plugin marketplace add nmajestic/skills
+/plugin install specflow@nmajestic
 ```
 
-Skills are namespaced: `/overkill:run-pipeline`, `/overkill:spec`, and so on.
+Skills are namespaced: `/specflow:run-pipeline`, `/specflow:spec`, and so on.
 
 ### Standalone skills (Claude Code or OpenCode)
 
 ```bash
-git clone https://github.com/nmajestic/overkill_skills
-cd overkill_skills
+git clone https://github.com/nmajestic/skills
+cd skills
 
 scripts/install.sh --tool claude                    # ~/.claude/skills
 scripts/install.sh --tool opencode                  # ~/.config/opencode/skills
@@ -77,14 +75,14 @@ covers both tools. Standalone skills use their plain names (`spec`, `plan`, …)
 if another installed skill already has one of these names, prefer the plugin
 or a project-only install.
 
-Overkill needs `git` and, for `open-pr`, the GitHub CLI (`gh`) signed in.
+Specflow needs `git` and, for `open-pr`, the GitHub CLI (`gh`) signed in.
 
 ## Usage
 
 Start a run with an idea or an issue link:
 
 ```
-/overkill:run-pipeline add a --json flag to the export command
+/specflow:run-pipeline add a --json flag to the export command
 ```
 
 In OpenCode, or with standalone skills, ask for it by name: "use the

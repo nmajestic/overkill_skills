@@ -1,4 +1,4 @@
-# Working on the Overkill repo
+# Working on the Specflow repo
 
 - Skills live in `skills/<name>/SKILL.md`. The folder name and the `name` in
   the frontmatter must match and be lowercase kebab-case.

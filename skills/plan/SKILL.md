@@ -1,6 +1,6 @@
 ---
 name: plan
-description: Overkill stage 2. Turns an approved spec into an approved implementation plan in .record/NNNN-slug/plan.md - codebase exploration, design decisions, interfaces, tasks grouped into parallel waves, AC coverage and the exact commands to verify with. Use after a spec is approved, or when implement reports the plan is wrong.
+description: Specflow stage 2. Turns an approved spec into an approved implementation plan in .record/NNNN-slug/plan.md - codebase exploration, design decisions, interfaces, tasks grouped into parallel waves, AC coverage and the exact commands to verify with. Use after a spec is approved, or when implement reports the plan is wrong.
 license: MIT
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: open-pr
-description: Overkill stage 7. Once verify passes and review is approved, rebases onto the default branch, pushes, opens a ready-for-review pull request with a factual description built from the run's record, then watches CI and hands failures back for fixing. Use at the end of an Overkill run.
+description: Specflow stage 7. Once verify passes and review is approved, rebases onto the default branch, pushes, opens a ready-for-review pull request with a factual description built from the run's record, then watches CI and hands failures back for fixing. Use at the end of a Specflow run.
 license: MIT
 ---
 
@@ -47,7 +47,7 @@ Read `references/conventions.md` first.
 7. **Watch CI.** One subagent runs `gh pr checks <number> --watch` and returns
    `ci PASS`, `ci SKIPPED no checks`, or `ci FAIL <job>, <job>`. On failure it
    saves `gh run view <run-id> --log-failed` to
-   `.git/overkill/logs/NNNN/ci-r<round>-<job>.log` and returns the failing jobs
+   `.git/specflow/logs/NNNN/ci-r<round>-<job>.log` and returns the failing jobs
    with a short excerpt each.
 8. **Hand back.**
    - CI passes → `open-pr DONE <url>`.

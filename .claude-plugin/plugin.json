@@ -1,12 +1,12 @@
 {
-  "name": "overkill",
+  "name": "specflow",
   "version": "0.1.0",
-  "description": "A quality-first pipeline every agent-written change goes through: spec, plan, tests first, parallel implementation, automated checks, an 8-persona review, and a pull request.",
+  "description": "A spec-driven engineering pipeline for agent-written changes: spec, plan, tests first, parallel implementation, automated checks, an 8-persona review, and a pull request.",
   "author": {
     "name": "Nicholas Majestic"
   },
-  "homepage": "https://github.com/nmajestic/overkill_skills",
-  "repository": "https://github.com/nmajestic/overkill_skills",
+  "homepage": "https://github.com/nmajestic/skills",
+  "repository": "https://github.com/nmajestic/skills",
   "license": "MIT",
   "keywords": ["pipeline", "spec", "planning", "testing", "code-review", "pull-request", "subagents"]
 }

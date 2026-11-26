@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install the Overkill skills as standalone skills (not as a plugin).
+# Install the Specflow skills as standalone skills (not as a plugin).
 #
 #   scripts/install.sh --tool claude              # ~/.claude/skills
 #   scripts/install.sh --tool opencode            # ~/.config/opencode/skills

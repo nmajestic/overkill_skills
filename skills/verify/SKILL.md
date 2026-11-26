@@ -1,6 +1,6 @@
 ---
 name: verify
-description: Overkill stage 5. Runs every automated check in parallel - full test suite, linter with warnings as errors, format check, type-check, build, dependency audit, and the pipeline's own rules - and reports pass or fail without changing anything. Use after implement in an Overkill run, or to check a branch.
+description: Specflow stage 5. Runs every automated check in parallel - full test suite, linter with warnings as errors, format check, type-check, build, dependency audit, and the pipeline's own rules - and reports pass or fail without changing anything. Use after implement in a Specflow run, or to check a branch.
 license: MIT
 ---
 
@@ -28,7 +28,7 @@ Read `references/conventions.md` first.
 1. **Clean tree.** Uncommitted changes are `clean-tree FAIL`.
 2. **Dispatch one subagent per check, all in one message** (up to 8 at once,
    queue the rest). Each runs exactly one check, writes the full output to
-   `.git/overkill/logs/NNNN/verify-r<round>-<check>.log`, and returns one receipt
+   `.git/specflow/logs/NNNN/verify-r<round>-<check>.log`, and returns one receipt
    line with a short error excerpt (at most ten words) if it failed.
 
 ### Code checks

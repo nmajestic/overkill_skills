@@ -1,8 +1,8 @@
-# Overkill conventions
+# Specflow conventions
 
-Shared rules for every Overkill skill. Each skill folder carries an identical
+Shared rules for every Specflow skill. Each skill folder carries an identical
 copy at `references/conventions.md` so it works when installed on its own.
-The source of truth is `shared/conventions.md` in the Overkill repo.
+The source of truth is `shared/conventions.md` in the Specflow repo.
 
 ## The pipeline
 
@@ -42,8 +42,8 @@ Each run lives in `.record/NNNN-<slug>/` and is committed with the code.
 ```
 
 Local machine state that must never be committed (the active-run marker,
-worker notes, full logs) lives in `overkill/` inside the repo's git directory,
-written below as `.git/overkill/`. Find the real path with
+worker notes, full logs) lives in `specflow/` inside the repo's git directory,
+written below as `.git/specflow/`. Find the real path with
 `git rev-parse --git-common-dir` (inside a worktree, `.git` is a file). Git
 never tracks it, so nothing needs to be added to `.gitignore`.
 
@@ -139,7 +139,7 @@ There are no notifications; the run simply waits.
 - Never merge a pull request. Never force-push a branch other people use.
   `--force-with-lease` is allowed only on the run's own branch after a rebase.
 - One run at a time per repo. The active run is recorded in
-  `.git/overkill/active` (run folder name and branch).
+  `.git/specflow/active` (run folder name and branch).
 
 ## Tools
 

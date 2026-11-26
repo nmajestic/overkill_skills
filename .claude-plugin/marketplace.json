@@ -5,9 +5,9 @@
   },
   "plugins": [
     {
-      "name": "overkill",
+      "name": "specflow",
       "source": "./",
-      "description": "A quality-first pipeline every agent-written change goes through, from idea to pull request.",
+      "description": "A spec-driven engineering pipeline for agent-written changes, from idea to pull request.",
       "version": "0.1.0"
     }
   ]

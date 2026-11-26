@@ -1,6 +1,6 @@
 ---
 name: write-tests
-description: Overkill stage 3. Writes a small, intentional set of failing tests straight from an approved spec's acceptance criteria, before any implementation, and commits them as their own commit. Use after a plan is approved in an Overkill run.
+description: Specflow stage 3. Writes a small, intentional set of failing tests straight from an approved spec's acceptance criteria, before any implementation, and commits them as their own commit. Use after a plan is approved in a Specflow run.
 license: MIT
 ---
 

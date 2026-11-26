@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Validate the Overkill repo. Run before committing; CI runs it too.
+# Validate the Specflow repo. Run before committing; CI runs it too.
 set -uo pipefail
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
@@ -11,10 +11,11 @@ for f in plugin marketplace; do
   python3 -m json.tool "$root/.claude-plugin/$f.json" > /dev/null \
     || err ".claude-plugin/$f.json is not valid JSON"
 done
+plugin_name=$(python3 -c "import json;print(json.load(open('$root/.claude-plugin/plugin.json'))['name'])")
 plugin_version=$(python3 -c "import json;print(json.load(open('$root/.claude-plugin/plugin.json'))['version'])")
-market_version=$(python3 -c "import json;m=json.load(open('$root/.claude-plugin/marketplace.json'));print([p for p in m['plugins'] if p['name']=='overkill'][0]['version'])")
+market_version=$(python3 -c "import json;m=json.load(open('$root/.claude-plugin/marketplace.json'));matches=[p for p in m['plugins'] if p['name']=='$plugin_name'];print(matches[0]['version'] if matches else '')")
 [ "$plugin_version" = "$market_version" ] \
-  || err "version mismatch: plugin.json $plugin_version, marketplace.json $market_version"
+  || err "version mismatch or missing plugin '$plugin_name': plugin.json $plugin_version, marketplace.json ${market_version:-<missing>}"
 
 # 2. Every skill has valid frontmatter whose name matches its folder.
 for dir in "$root"/skills/*/; do

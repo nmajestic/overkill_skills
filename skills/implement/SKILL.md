@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Overkill stage 4. Carries out an approved plan with up to 8 parallel worker subagents in separate git worktrees, one commit per task, until the frozen failing tests pass. Also applies fixes sent back by verify, review or CI. Use after write-tests in an Overkill run.
+description: Specflow stage 4. Carries out an approved plan with up to 8 parallel worker subagents in separate git worktrees, one commit per task, until the frozen failing tests pass. Also applies fixes sent back by verify, review or CI. Use after write-tests in a Specflow run.
 license: MIT
 ---
 
@@ -55,7 +55,7 @@ For each wave in the plan, in order:
      is now complete; otherwise it must compile and not break existing tests.
    - Debugs as long as needed, with no attempt limit, but never repeats an
      attempt: each one must try something different. It keeps a short attempt
-     log in `.git/overkill/notes/NNNN/<task>.md`.
+     log in `.git/specflow/notes/NNNN/<task>.md`.
    - If the plan itself is wrong (an interface doesn't fit, a dependency the
      plan missed), stops with `BLOCKED plan-mismatch: <why>` rather than
      improvising.
@@ -122,8 +122,8 @@ is `DONE`, then:
 ## Worktrees
 
 - Location: a sibling folder outside the repo,
-  `../<repo>.overkill-wt/NNNN/<task>`, on a branch named
-  `overkill-wt/NNNN/<task>`. Fall back to the system temp folder if the
+  `../<repo>.specflow-wt/NNNN/<task>`, on a branch named
+  `specflow-wt/NNNN/<task>`. Fall back to the system temp folder if the
   sibling folder can't be created.
 - Remove with `git worktree remove --force <path>` and delete the temporary
   branch after its commit is merged or discarded. Run `git worktree prune`

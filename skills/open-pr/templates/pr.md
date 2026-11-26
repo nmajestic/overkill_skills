@@ -15,7 +15,7 @@
 ## Checks
 
 All automated checks passed on <commit>: tests, lint (warnings as errors),
-format, type-check, build, dependency audit, and Overkill's rule checks.
+format, type-check, build, dependency audit, and Specflow's rule checks.
 <Note any check marked N/A in the plan, with its reason.>
 
 ## Review

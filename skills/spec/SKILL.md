@@ -1,6 +1,6 @@
 ---
 name: spec
-description: Overkill stage 1. Turns a rough idea, bug report or issue into an approved, testable spec with Given/When/Then acceptance criteria in .record/NNNN-slug/spec.md. Use when starting any new change in an Overkill repo or when the user asks to spec an idea.
+description: Specflow stage 1. Turns a rough idea, bug report or issue into an approved, testable spec with Given/When/Then acceptance criteria in .record/NNNN-slug/spec.md. Use when starting any new change in a Specflow repo or when the user asks to spec an idea.
 license: MIT
 ---
 

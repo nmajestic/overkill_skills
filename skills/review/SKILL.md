@@ -1,6 +1,6 @@
 ---
 name: review
-description: Overkill stage 6. Independent code review by 8 parallel reviewer personas with fresh context, followed by a verifier that removes duplicates, tries to disprove every finding and assigns severity. Every finding must be fixed before a pull request opens. Use after verify passes in an Overkill run.
+description: Specflow stage 6. Independent code review by 8 parallel reviewer personas with fresh context, followed by a verifier that removes duplicates, tries to disprove every finding and assigns severity. Every finding must be fixed before a pull request opens. Use after verify passes in a Specflow run.
 license: MIT
 ---
 
